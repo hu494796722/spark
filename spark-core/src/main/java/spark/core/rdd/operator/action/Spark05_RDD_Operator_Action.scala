@@ -12,13 +12,13 @@ object Spark05_RDD_Operator_Action {
         //val rdd = sc.makeRDD(List(1,1,1,4),2)
         val rdd = sc.makeRDD(List(
             ("a", 1),("a", 2),("a", 3)
-        ))
+        ),3)
 
         // TODO - 行动算子
         rdd.saveAsTextFile("output")
         rdd.saveAsObjectFile("output1")
-        // saveAsSequenceFile方法要求数据的格式必须为K-V类型
-        rdd.saveAsSequenceFile("output2")
+        // saveAsSequenceFile 方法要求数据的格式必须为 K_V类型
+        rdd.saveAsSequenceFile("output3")
 
         sc.stop()
 
